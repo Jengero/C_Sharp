@@ -131,9 +131,13 @@ class Homework_2
 {
     public void Task_2_1()
     {
-        Console.WriteLine("");
-        var Age = Console.ReadLine();
+        Console.WriteLine("Enter fout tipes of data:");
 
+        int age = System.Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine(age);
+        //double CorrectAnswers = Console.ReadLine();
+        //char grade = Console.ReadLine();
+        //bool ispasssed = Console.ReadLine();
 
     }
 
