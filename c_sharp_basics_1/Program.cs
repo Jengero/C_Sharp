@@ -1,6 +1,8 @@
 ﻿
+
 using System;
 using System.Security.Cryptography;
+
 using System.Text;
 using static System.Net.WebRequestMethods;
 
@@ -14,6 +16,7 @@ Console.WriteLine("Hello, Work!");
 //new Homework().Task_6();
 //new Homework().Extra_1();
 
+
 //new Homework_2().Task_2_1();
 //new Homework_2().Task_2_2();
 //new Homework_2().Task_2_3();
@@ -23,6 +26,7 @@ Console.WriteLine("Hello, Work!");
 //new Homework_2().Task_2_7();
 //new Homework_2().Task_2_8();
 //new Homework_2().Task_2_9();
+
 
 class Homework
 {
@@ -127,6 +131,7 @@ public void Task_4()
 
 
     }
+
 }
 
 class Homework_2
@@ -329,3 +334,6 @@ Thanks for your purchase!");
     }
 
 }
+
+}
+
