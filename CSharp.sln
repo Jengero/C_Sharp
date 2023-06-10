@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33717.318
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpBasics", "CSharpBasics\CSharpBasics.csproj", "{F3995FA7-F3B6-4878-A1D1-EB5AA63D44DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "trash_place", "trash_place\trash_place.csproj", "{EF6CBB7C-8615-462D-B6FB-BED42B537DC5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3995FA7-F3B6-4878-A1D1-EB5AA63D44DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3995FA7-F3B6-4878-A1D1-EB5AA63D44DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3995FA7-F3B6-4878-A1D1-EB5AA63D44DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3995FA7-F3B6-4878-A1D1-EB5AA63D44DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF6CBB7C-8615-462D-B6FB-BED42B537DC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF6CBB7C-8615-462D-B6FB-BED42B537DC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF6CBB7C-8615-462D-B6FB-BED42B537DC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF6CBB7C-8615-462D-B6FB-BED42B537DC5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C93575D8-868B-419B-B3C2-4B2AF8D66BBD}
+	EndGlobalSection
+EndGlobal
