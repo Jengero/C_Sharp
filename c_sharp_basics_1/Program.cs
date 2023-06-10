@@ -21,7 +21,7 @@ Console.WriteLine("Hello, Work!");
 //new Homework_2().Task_2_2();
 //new Homework_2().Task_2_3();
 //new Homework_2().Task_2_4();
-//new Homework_2().Task_2_5();
+new Homework_2().Task_2_5();
 //new Homework_2().Task_2_6();
 //new Homework_2().Task_2_7();
 //new Homework_2().Task_2_8();
@@ -335,5 +335,4 @@ Thanks for your purchase!");
 
 }
 
-}
 
