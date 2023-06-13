@@ -33,31 +33,11 @@ class Homework_3
         Console.WriteLine("Enter two numbers. The first one should be less than the second.");
         var enteredNum1 = Console.ReadLine();
         var enteredNum2 = Console.ReadLine();
-
-        bool res1 = int.TryParse(enteredNum1, out int num1);
-        bool res2 = int.TryParse(enteredNum2, out int num2);
-
-        if (num1 < num2)
+        bool res1 = int.TryParse(enteredNum1, out int min);
+        bool res2 = int.TryParse(enteredNum2, out int max);
+        if (min < max)
         {
-            for (int i = num1; i < num2; i++)
-            {
-                if (i % 2 == 0 && i % 5 != 0)
-                {
-                    Console.WriteLine("Tutti");
-                }
-                else if (i % 5 == 0 && i % 2 != 0)
-                {
-                    Console.WriteLine("Frutti");
-                }
-                else if (i % 5 == 0 && i % 2 == 0)
-                {
-                    Console.WriteLine("Tutti-frutti");
-                }
-                else
-                {
-                    Console.WriteLine($"Number {i} can’t be divided on 2 or 5");
-                }
-            }
+            CheckDivision(min, max);
         }
         else
         {
@@ -72,34 +52,16 @@ class Homework_3
         int min = Math.Min(num1, num2);
         int max = Math.Max(num1, num2);
 
-        if (res1 && res2 == true) 
+        if (res1 && res2)
         {
-            for (int i = min; i <= max; i++)
-            {
-                if (i % 2 == 0 && i % 5 != 0)
-                {
-                    Console.WriteLine("Tutti");
-                }
-                else if (i % 5 == 0 && i % 2 != 0)
-                {
-                    Console.WriteLine("Frutti");
-                }
-                else if (i % 5 == 0 && i % 2 == 0)
-                {
-                    Console.WriteLine("Tutti-frutti");
-                }
-                else
-                {
-                    Console.WriteLine($"Number {i} can’t be divided on 2 or 5");
-                }
-            }
+            CheckDivision(min, max);
         }
-        else 
+        else
         {
             Console.WriteLine("Numbers are incorrect!");
         }
 
-        //switch (res1 && res2 == true)
+        //switch (res1 && res2)
         //{
         //    case true:
         //        if (num1 < num2)
@@ -151,5 +113,27 @@ class Homework_3
         //        Console.WriteLine("Numbers are incorrect!");
         //        break;
         //}
+    }
+    private void CheckDivision(int min, int max)
+    {
+        for (int i = min; i <= max; i++)
+        {
+            if (i % 2 == 0 && i % 5 != 0)
+            {
+                Console.WriteLine("Tutti");
+            }
+            else if (i % 5 == 0 && i % 2 != 0)
+            {
+                Console.WriteLine("Frutti");
+            }
+            else if (i % 5 == 0 && i % 2 == 0)
+            {
+                Console.WriteLine("Tutti-frutti");
+            }
+            else
+            {
+                Console.WriteLine($"Number {i} can’t be divided on 2 or 5");
+            }
+        }
     }
 }
