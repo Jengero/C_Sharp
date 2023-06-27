@@ -8,17 +8,16 @@ namespace CSharpOOP4
 {
     public class Ball : Shape
     {
+        private double _radius;
+        double ballVolume;
         public double Radius
         {
             get => _radius;
             set { _radius = value; }
         }
-        private double _radius;
-        public double ballVolume;
-
         public Ball(string name, double radius) : base(name)
         {
-            Name = "Ball";
+            Name = name;
             Radius = radius;
         }
 
@@ -26,6 +25,7 @@ namespace CSharpOOP4
         {
             ballVolume = Math.Round(4 * Math.PI * (Math.Pow(Radius, 3)) / 3, 2); 
         }
+
         public override void PrintFigureInformation()
         {
             base.PrintFigureInformation();

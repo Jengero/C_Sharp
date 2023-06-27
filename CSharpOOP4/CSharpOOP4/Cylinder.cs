@@ -8,6 +8,9 @@ namespace CSharpOOP4
 {
     public class Cylinder : Shape
     {
+        private double _radius;
+        private double _height;
+        double cylinderVolume;
         public double Radius
         {
             get => _radius;
@@ -18,13 +21,9 @@ namespace CSharpOOP4
             get => _height;
             set { _height = value; }
         }
-        private double _radius;
-        private double _height;
-        public double cylinderVolume;
-
         public Cylinder(string name, double radius, double height ) : base(name)
         {
-            Name = "Cylinder";
+            Name = name;
             Radius = radius;
             Height = height;
         }
@@ -33,6 +32,7 @@ namespace CSharpOOP4
         {
             cylinderVolume = Math.Round(Math.PI * Math.Pow(Radius, 2) * Height, 2);
         }
+
         public override void PrintFigureInformation()
         {
             base.PrintFigureInformation();

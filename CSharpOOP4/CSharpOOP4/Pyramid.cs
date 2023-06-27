@@ -8,6 +8,9 @@ namespace CSharpOOP4
 {
     public class Pyramid : Shape
     {
+        private double _baseArea;
+        private double _height;
+        double pyramidVolume;
         public double BaseArea
         {
             get => _baseArea;
@@ -18,13 +21,10 @@ namespace CSharpOOP4
             get => _height;
             set { _height = value; }
         }
-        public double pyramidVolume;
-        private double _baseArea;
-        private double _height;
 
         public Pyramid(string name, double baseArea, double height) : base(name)
         {
-            Name = "Pyramid";
+            Name = name;
             BaseArea = baseArea;
             Height = height;
         }
@@ -33,6 +33,7 @@ namespace CSharpOOP4
         {
             pyramidVolume = Math.Round(BaseArea * Height / 3, 2);
         }
+
         public override void PrintFigureInformation()
         {
             base.PrintFigureInformation();

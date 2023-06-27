@@ -9,16 +9,17 @@ namespace CSharpOOP4
 {
     public abstract class Shape
     {
+        private string _name;
         public string Name
         {
             get => _name;
             set { _name = value; }
         }
-        private string _name;
 
         public Shape(string name) { Name = name; }
 
         public abstract void CalculateVolume();
+
         public virtual void PrintFigureInformation()
         {
             Console.WriteLine($"Type of figure is {Name}");
