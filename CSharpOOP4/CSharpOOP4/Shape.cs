@@ -10,6 +10,7 @@ namespace CSharpOOP4
     public abstract class Shape
     {
         private string _name;
+
         public string Name
         {
             get => _name;

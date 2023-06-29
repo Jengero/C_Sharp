@@ -10,7 +10,7 @@ namespace CSharpOOP4
     {
         private double _baseArea;
         private double _height;
-        double pyramidVolume;
+        private double _pyramidVolume;
         public double BaseArea
         {
             get => _baseArea;
@@ -31,7 +31,7 @@ namespace CSharpOOP4
 
         public override void CalculateVolume()
         {
-            pyramidVolume = Math.Round(BaseArea * Height / 3, 2);
+            _pyramidVolume = Math.Round(BaseArea * Height / 3, 2);
         }
 
         public override void PrintFigureInformation()
@@ -39,7 +39,7 @@ namespace CSharpOOP4
             base.PrintFigureInformation();
             Console.WriteLine($"The height is {Height}");
             Console.WriteLine($"The area of the base is {BaseArea}");
-            Console.WriteLine($"The volume is {pyramidVolume}");
+            Console.WriteLine($"The volume is {_pyramidVolume}");
         }
     }
 }

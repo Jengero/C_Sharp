@@ -9,7 +9,8 @@ namespace CSharpOOP4
     public class Ball : Shape
     {
         private double _radius;
-        double ballVolume;
+        private double _ballVolume;
+        
         public double Radius
         {
             get => _radius;
@@ -23,14 +24,14 @@ namespace CSharpOOP4
 
         public override void CalculateVolume()
         {
-            ballVolume = Math.Round(4 * Math.PI * (Math.Pow(Radius, 3)) / 3, 2); 
+            _ballVolume = Math.Round(4 * Math.PI * (Math.Pow(Radius, 3)) / 3, 2);
         }
 
         public override void PrintFigureInformation()
         {
             base.PrintFigureInformation();
             Console.WriteLine($"The radius is {Radius}");
-            Console.WriteLine($"The volume is {ballVolume}");
+            Console.WriteLine($"The volume is {_ballVolume}");
         }
     }
 }

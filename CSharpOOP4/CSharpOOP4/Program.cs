@@ -1,20 +1,20 @@
 ﻿#region BallVolume
 using CSharpOOP4;
 
-Ball ballExample = new("Ball", 2.1563);
+Ball BallExample = new("Ball", 2.1563);
 
-ballExample.CalculateVolume();
-ballExample.PrintFigureInformation();
+BallExample.CalculateVolume();
+BallExample.PrintFigureInformation();
 #endregion
 #region PyramidVolume
-Pyramid pyramidExample = new("Pyramid", 7.9, 15.95);
+Pyramid PyramidExample = new("Pyramid", 7.9, 15.95);
 
-pyramidExample.CalculateVolume();
-pyramidExample.PrintFigureInformation();
+PyramidExample.CalculateVolume();
+PyramidExample.PrintFigureInformation();
 #endregion
 #region CylinderVolume
-Cylinder cylinderExample = new("Cylinder", 2, 3.342);
+Cylinder CylinderExample = new("Cylinder", 2, 3.342);
 
-cylinderExample.CalculateVolume();
-cylinderExample.PrintFigureInformation();
+CylinderExample.CalculateVolume();
+CylinderExample.PrintFigureInformation();
 #endregion

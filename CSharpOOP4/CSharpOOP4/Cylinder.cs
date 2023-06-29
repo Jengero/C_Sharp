@@ -10,7 +10,7 @@ namespace CSharpOOP4
     {
         private double _radius;
         private double _height;
-        double cylinderVolume;
+        private double _cylinderVolume;
         public double Radius
         {
             get => _radius;
@@ -21,6 +21,7 @@ namespace CSharpOOP4
             get => _height;
             set { _height = value; }
         }
+
         public Cylinder(string name, double radius, double height ) : base(name)
         {
             Name = name;
@@ -30,7 +31,7 @@ namespace CSharpOOP4
 
         public override void CalculateVolume()
         {
-            cylinderVolume = Math.Round(Math.PI * Math.Pow(Radius, 2) * Height, 2);
+            _cylinderVolume = Math.Round(Math.PI * Math.Pow(Radius, 2) * Height, 2);
         }
 
         public override void PrintFigureInformation()
@@ -38,7 +39,7 @@ namespace CSharpOOP4
             base.PrintFigureInformation();
             Console.WriteLine($"The height is {Height}");
             Console.WriteLine($"The radius is {Radius}");
-            Console.WriteLine($"The volume is {cylinderVolume}");
+            Console.WriteLine($"The volume is {_cylinderVolume}");
         }
     }
 }
