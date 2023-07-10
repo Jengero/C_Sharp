@@ -15,7 +15,7 @@ using System.Diagnostics;
 
 //List<int> randomNumbers = new() { -7, 7, 14, -11, 8, 11, -14, 10, -12, -8 };
 
-//var SelectedNumbers = randomNumbers.Where(p => p < 10).Select(r => r).ToList();
+//var SelectedNumbers = randomNumbers.Where(p => p < 10).ToList();
 
 //Console.WriteLine($"List of positive numbers, that are less than 10 and negative numbers:");
 
@@ -29,14 +29,16 @@ using System.Diagnostics;
 //                  orderby name
 //                  select name;
 
-//Console.WriteLine($"List of names, that are less than zero and less than 10:");
+//Console.WriteLine($"List of sorted names with an even number of characters:");
 
 //foreach (var name in sortedNames) { Console.WriteLine(name); }
 #endregion
 #region Task_4. List of cities starting with 'C' and ending with 'a'
 //List<string> randomCities = new() { "Sapporo", "Lima", "Almaty", "Jakarta", "Casablanca", "Chengdu" };
 
-//var cities = randomCities.Where(r => r.StartsWith("C") && r.EndsWith("a")).Select(r => r).ToList();
+//char startLetter = 'C';
+//char endLetter = 'a';
+//var cities = randomCities.Where(r => r.StartsWith(startLetter) && r.EndsWith(endLetter)).Select(r => r).ToList();
 
 //cities.ForEach(Console.WriteLine);
 #endregion
@@ -56,7 +58,7 @@ using System.Diagnostics;
 #region Task_6 List of sorted numbers without duplicates
 //List<int> numbersWithDuplication = new() { 34, 32, 42, 42, 42, 42, 30, 9, 23, 4 };
 
-//var notRepetitiveNumbers = numbersWithDuplication.Distinct().OrderDescending().ToList();
+//var notRepetitiveNumbers = numbersWithDuplication.Distinct().Reverse().ToList();
 //notRepetitiveNumbers.ForEach(f => Console.WriteLine(f));
 #endregion
 #region Task_7 Checking for a match between entered number among the elements of the collection
