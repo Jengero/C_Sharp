@@ -59,6 +59,7 @@ using System.Diagnostics;
 //List<int> numbersWithDuplication = new() { 34, 32, 42, 42, 42, 42, 30, 9, 23, 4 };
 
 //var notRepetitiveNumbers = numbersWithDuplication.Distinct().Reverse().ToList();
+
 //notRepetitiveNumbers.ForEach(f => Console.WriteLine(f));
 #endregion
 #region Task_7 Checking for a match between entered number among the elements of the collection
