@@ -8,6 +8,10 @@ namespace CSharpException
 {
     public class Triangle
     {
+        private double _firstSide;
+        private double _secondSide;
+        private double _thirdSide;
+
         public double FirstSide
         {
             get => _firstSide;
@@ -16,6 +20,7 @@ namespace CSharpException
                 _firstSide = value; 
             }
         }
+
         public double SecondSide
         {
             get => _secondSide;
@@ -24,6 +29,7 @@ namespace CSharpException
                 _secondSide = value; 
             }
         }
+
         public double ThirdSide
         {
             get => _thirdSide;
@@ -33,10 +39,6 @@ namespace CSharpException
             }
         }
 
-        private double _firstSide;
-        private double _secondSide;
-        private double _thirdSide;
-
         public Triangle(double firstSide, double secondSide, double thirdSide)
         {
             FirstSide = firstSide;
@@ -44,6 +46,13 @@ namespace CSharpException
             ThirdSide = thirdSide;
         }
 
+        public void CheckSidesValues()
+        {
+            if (FirstSide > SecondSide + ThirdSide) { throw new SideValueException(FirstSide, SecondSide, ThirdSide); }
+            else if (SecondSide > FirstSide + ThirdSide) { throw new SideValueException(SecondSide, FirstSide, ThirdSide); }
+            else if (ThirdSide > FirstSide + SecondSide) { throw new SideValueException(ThirdSide, FirstSide, SecondSide); }
+            else { Console.WriteLine($"Triangle with {FirstSide}, {SecondSide}, {ThirdSide} sides"); } 
+        }
         public static double EnterSide()
         {
             double side = 0;
@@ -52,7 +61,7 @@ namespace CSharpException
             {
                 try
                 {
-                    side = ReadDoubleFromConsole.ReadDouble();
+                    side = ConsoleReader.ReadDouble();
                     if (side <= 0) { throw new NegativeOrZeroValueException(side); }
                     else correctValue = true;
                 }
@@ -64,6 +73,5 @@ namespace CSharpException
             }
             return side;
         }
-
     }
 }
