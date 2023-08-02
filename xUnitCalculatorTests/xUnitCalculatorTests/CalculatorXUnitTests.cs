@@ -14,7 +14,7 @@ namespace xUnitCalculatorTests
         [Theory]
         [InlineData(25, 64, 89)]
         [InlineData(-56, -6.25, -62.25)]
-        public void additionTest(double firstArgument, double secondArgument, double expectedResult)
+        public void AditionTest(double firstArgument, double secondArgument, double expectedResult)
         {
             double actualResult = _calculator.Add(firstArgument, secondArgument);
             Assert.Equal(expectedResult, actualResult);
@@ -23,7 +23,7 @@ namespace xUnitCalculatorTests
         [Theory]
         [InlineData(5, 8, 40)]
         [InlineData(23, 0, 0)]
-        public void multiplicationTest(double firstArgument, double secondArgument, double expectedResult)
+        public void MultiplicationTest(double firstArgument, double secondArgument, double expectedResult)
         {
             double actualResult = _calculator.Multiply(firstArgument, secondArgument);
             Assert.Equal(expectedResult, actualResult);
@@ -31,7 +31,7 @@ namespace xUnitCalculatorTests
 
         [Theory]
         [InlineData(-6, 23, -29)]
-        public void subtractionTest(double firstArgument, double secondArgument, double expectedResult)
+        public void SubtractionTest(double firstArgument, double secondArgument, double expectedResult)
         {
             double actualResult = _calculator.Sub(firstArgument, secondArgument);
             Assert.Equal(expectedResult, actualResult);
@@ -40,14 +40,14 @@ namespace xUnitCalculatorTests
         [Theory]
         [InlineData('a', "23")]
         [InlineData("test", 23)]
-        public void subExceptionTest(object numberToConvert, object subtrahendValue)
+        public void SubExceptionTest(object numberToConvert, object subtrahendValue)
         {
             Assert.Throws<NotFiniteNumberException>(() => _calculator.Sub(numberToConvert, subtrahendValue));
         }
 
         [Theory]
         [InlineData("test", 2)]
-        public void powExceptionTest(object numberToConvert, object Value)
+        public void PowExceptionTest(object numberToConvert, object Value)
         {
             Assert.Throws<NotFiniteNumberException>(() => _calculator.Pow(numberToConvert, Value));
         }
@@ -55,14 +55,14 @@ namespace xUnitCalculatorTests
         [Theory]
         [InlineData('g')]
         [InlineData("TEST")]
-        public void absExceptionTest(object valueToConvert)
+        public void AbsExceptionTest(object valueToConvert)
         {
             Assert.Throws<NotFiniteNumberException>(() => _calculator.Abs(valueToConvert));
         }
 
         [Theory]
         [InlineData("test")]
-        public void sinExceptionTest(object valueToConvert)
+        public void SinExceptionTest(object valueToConvert)
         {
             Assert.Throws<NotFiniteNumberException>(() => _calculator.Sin(valueToConvert));
         }
@@ -70,21 +70,21 @@ namespace xUnitCalculatorTests
         [Theory]
         [InlineData("cos")]
         [InlineData('g')]
-        public void cosExceptionTest(object valueToConvert)
+        public void CosExceptionTest(object valueToConvert)
         {
             Assert.Throws<NotFiniteNumberException>(() => _calculator.Cos(valueToConvert));
         }
 
         [Theory]
         [InlineData("negative")]
-        public void isPositiveExceptionTest(object valueToConvert)
+        public void IsPositiveExceptionTest(object valueToConvert)
         {
             Assert.Throws<NotFiniteNumberException>(() => _calculator.isPositive(valueToConvert));
         }
 
         [Theory]
         [InlineData("Positive")]
-        public void isNegativeExceptionTest(object valueToConvert)
+        public void IsNegativeExceptionTest(object valueToConvert)
         {
             Assert.Throws<NotFiniteNumberException>(() => _calculator.isNegative(valueToConvert));
         }
